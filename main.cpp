@@ -5,24 +5,23 @@ using namespace std;
 
 int main()
 {
+	
 	setlocale(LC_ALL, "Russian");
 	
 	fstream f;
 	
-	f.open("����� ���� ������� 2019.txt");
+	f.open("twitter-1.txt");
 	
 	if (!f){
 		
 		cout << "Error!";
 		
 	}
-	
-	cout << "Hello!";
-	char ch;
-	while (!f.eof())
+
+	string s;
+	while (getline(f, s))
 	{
-		f >> ch;
-		cout << ch;
+		cout << s << endl;
 	}	
 	f.close();
 }
